@@ -1,12 +1,16 @@
-import React from "react";
-import logo from "./logo.svg";
-import { Container, Image } from "./Components";
+import * as THREE from "three";
+import { useState, useRef } from "react";
+import Cube from "./components/Cube";
+import { ContainerCanvas } from "./Components";
 
-function App() {
+function App(): JSX.Element {
   return (
-    <Container>
-      <Image src={logo} className="App-logo" alt="logo" />
-    </Container>
+    <ContainerCanvas>
+      <ambientLight />
+      <pointLight position={[10, 10, 10]} />
+      <Cube position={[2, 0, 0]} />
+      <Cube position={[-2, 0, 0]} />
+    </ContainerCanvas>
   );
 }
 

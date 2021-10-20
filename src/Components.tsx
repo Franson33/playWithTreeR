@@ -1,12 +1,8 @@
 import styled from "styled-components";
+import { Canvas } from "@react-three/fiber";
 
-export const Container = styled.div`
+export const ContainerCanvas = styled(Canvas)`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 2fr 1fr;
-`;
-
-export const Image = styled.img`
-  grid-column: 2/3;
-  grid-row: 2/3;
+  grid-template-columns: 100vw;
+  grid-template-rows: 100vh;
 `;

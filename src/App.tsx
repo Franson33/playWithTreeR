@@ -1,16 +1,14 @@
-import * as THREE from "three";
-import { useState, useRef } from "react";
-import Cube from "./components/Cube";
-import { ContainerCanvas } from "./Components";
+import React from "react";
+import { Container, Header } from "./Components";
+import Cubes from "./screens/Cubes";
 
 function App(): JSX.Element {
   return (
-    <ContainerCanvas>
-      <ambientLight />
-      <pointLight position={[10, 10, 10]} />
-      <Cube position={[2, 0, 0]} />
-      <Cube position={[-2, 0, 0]} />
-    </ContainerCanvas>
+    <Container>
+      <Header>
+        <h1>Yo!</h1>
+      </Header>
+    </Container>
   );
 }
 

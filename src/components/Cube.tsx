@@ -7,7 +7,7 @@ function Cube(props: JSX.IntrinsicElements["mesh"]): JSX.Element {
   const [hover, setHover] = useState(false);
   const [active, setActive] = useState(false);
   useFrame((state, delta) => {
-    ref.current.rotation.x += 0.01;
+    ref.current.rotation.x += 0.001;
     ref.current.rotation.y += 0.01;
   });
   return (

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Canvas } from "@react-three/fiber";
+import { Link } from "react-router-dom";
 
 export const Container = styled("div")`
   display: grid;
@@ -37,4 +38,8 @@ export const StyledCanvas = styled(Canvas)`
   display: grid;
   grid-template-columns: 100vw;
   grid-template-rows: 100vh;
+`;
+
+export const StyledLink = styled(Link)`
+  color: #c190dd;
 `;

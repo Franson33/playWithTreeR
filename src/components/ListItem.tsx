@@ -1,11 +1,13 @@
 import React from "react";
+import { ListItemInterface } from "../screens/Home";
+import { StyledLink } from "../Components";
 
-function ListItem(): JSX.Element {
-  return (
-    <div>
-      <p>Item</p>
-    </div>
-  );
+interface ListItemPropsInterface {
+  item: ListItemInterface;
+}
+
+function ListItem({ item }: ListItemPropsInterface): JSX.Element {
+  return <StyledLink to={item.link}>{item.title}</StyledLink>;
 }
 
 export default ListItem;

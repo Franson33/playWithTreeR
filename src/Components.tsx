@@ -40,6 +40,26 @@ export const StyledCanvas = styled(Canvas)`
   grid-template-rows: 100vh;
 `;
 
+export const LinkBox = styled("div")`
+  display: grid;
+  width: 100%;
+  height: 5vh;
+  padding: 0px 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.4);
+
+  &:active {
+    transform: translateY(3px);
+    box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.4),
+      inset 0px 1px 2px 0px rgba(0, 0, 0, 0.4);
+  }
+`;
+
 export const StyledLink = styled(Link)`
+  height: 100%;
+`;
+
+export const LinkTitle = styled("p")`
+  align-self: center;
   color: #c190dd;
 `;

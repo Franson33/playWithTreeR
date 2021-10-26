@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import React, { useState, useRef } from "react";
+import { useState, useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 
 function Cube(props: JSX.IntrinsicElements["mesh"]): JSX.Element {

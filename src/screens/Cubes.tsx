@@ -5,7 +5,7 @@ function Cubes(): JSX.Element {
   return (
     <StyledCanvas>
       <ambientLight />
-      <pointLight position={[10, 10, 20]} />
+      <pointLight position={[50, 50, 50]} />
       <Cube position={[1.5, 1.5, 0]} />
       <Cube position={[-1.5, -1.5, 0]} />
       <Cube position={[1.5, -1.5, 0]} />

@@ -33,7 +33,7 @@ export const Body = styled("div")`
 `;
 
 export const List = styled("ul")`
-  margin: 5vh 25vw;
+  margin: 15px 25vw;
   background-color: #fff;
   border-radius: 5px;
 `;
@@ -43,7 +43,7 @@ export const StyledCanvas = styled(Canvas)`
   grid-template-columns: 100vw;
   grid-template-rows: 100vh;
   background-color: ${(props: StyledCanvasPropsInterface) =>
-    props.backColor ? props.backColor : "#f0f0f0"};
+    props.backColor ? props.backColor : "#151515"};
 `;
 
 export const LinkBox = styled("div")`
@@ -51,6 +51,7 @@ export const LinkBox = styled("div")`
   width: 100%;
   height: 5vh;
   padding: 0px 10px;
+  margin: 15px 0px;
   border-radius: 10px;
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.4);
 

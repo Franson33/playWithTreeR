@@ -6,10 +6,12 @@ function Cube(props: JSX.IntrinsicElements["mesh"]): JSX.Element {
   const ref = useRef<THREE.Mesh>(null!);
   const [hover, setHover] = useState(false);
   const [active, setActive] = useState(false);
+
   useFrame((state, delta) => {
     ref.current.rotation.x += 0.001;
     ref.current.rotation.y += 0.01;
   });
+
   return (
     <mesh
       {...props}

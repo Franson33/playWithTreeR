@@ -2,6 +2,10 @@ import styled from "styled-components";
 import { Canvas } from "@react-three/fiber";
 import { Link } from "react-router-dom";
 
+interface StyledCanvasPropsInterface {
+  backColor?: string;
+}
+
 export const Container = styled("div")`
   display: grid;
   grid-template-columns: 100vw;
@@ -38,6 +42,8 @@ export const StyledCanvas = styled(Canvas)`
   display: grid;
   grid-template-columns: 100vw;
   grid-template-rows: 100vh;
+  background-color: ${(props: StyledCanvasPropsInterface) =>
+    props.backColor ? props.backColor : "#f0f0f0"};
 `;
 
 export const LinkBox = styled("div")`

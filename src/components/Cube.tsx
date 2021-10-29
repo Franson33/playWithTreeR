@@ -4,7 +4,7 @@ import { useFrame, Vector3 } from "@react-three/fiber";
 import { useSpring, a } from "@react-spring/three";
 
 interface CubePropsInterface {
-  position?: Vector3;
+  position: Vector3;
   rotate?: boolean;
   clockwise?: boolean;
 }

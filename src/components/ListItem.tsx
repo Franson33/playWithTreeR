@@ -1,4 +1,3 @@
-import React from "react";
 import { ListItemInterface } from "../screens/Home";
 import { LinkBox, StyledLink, LinkTitle } from "../Components";
 

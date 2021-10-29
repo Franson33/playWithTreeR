@@ -9,7 +9,7 @@ export interface ListItemInterface {
 
 const listItems: ListItemInterface[] = [
   { title: "Rotating cubes", link: "/cubes" },
-  { title: "Second one", link: "/second" },
+  { title: "Controlled cube", link: "/controlledCube" },
 ];
 
 function Home(): JSX.Element {

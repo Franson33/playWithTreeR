@@ -6,10 +6,10 @@ function Cubes(): JSX.Element {
     <StyledCanvas>
       <ambientLight />
       <pointLight position={[50, 50, 50]} />
-      <Cube position={[1.5, 1.5, 0]} />
-      <Cube position={[-1.5, -1.5, 0]} />
-      <Cube position={[1.5, -1.5, 0]} />
-      <Cube position={[-1.5, 1.5, 0]} />
+      <Cube position={[1.5, 1.5, 0]} rotate clockwise />
+      <Cube position={[-1.5, -1.5, 0]} rotate clockwise />
+      <Cube position={[1.5, -1.5, 0]} rotate />
+      <Cube position={[-1.5, 1.5, 0]} rotate />
     </StyledCanvas>
   );
 }

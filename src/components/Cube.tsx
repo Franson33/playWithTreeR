@@ -1,16 +1,35 @@
 import * as THREE from "three";
-import { useState, useRef } from "react";
-import { useFrame } from "@react-three/fiber";
+import { useState, useRef, useEffect } from "react";
+import { useFrame, Vector3 } from "@react-three/fiber";
 import { useSpring, a } from "@react-spring/three";
 
-function Cube(props: JSX.IntrinsicElements["mesh"]): JSX.Element {
+interface CubePropsInterface {
+  position?: Vector3;
+  rotate?: boolean;
+  clockwise?: boolean;
+}
+
+function Cube({
+  position,
+  rotate,
+  clockwise,
+}: CubePropsInterface): JSX.Element {
+  const rotationValue = 0.009;
+  const [direction, setDirection] = useState(rotationValue);
   const ref = useRef<THREE.Mesh>(null!);
   const [hover, setHover] = useState(false);
   const [active, setActive] = useState(false);
 
+  useEffect(() => {
+    if (clockwise) {
+      setDirection(-rotationValue);
+    }
+  }, [clockwise]);
+
   useFrame((state, delta) => {
-    ref.current.rotation.x += 0.001;
-    ref.current.rotation.y += 0.01;
+    if (rotate) {
+      ref.current.rotation.y += direction;
+    }
   });
 
   const spring = useSpring({
@@ -20,7 +39,7 @@ function Cube(props: JSX.IntrinsicElements["mesh"]): JSX.Element {
 
   return (
     <a.mesh
-      {...props}
+      position={position}
       ref={ref}
       scale={spring.scale}
       onClick={(evt) => setActive(!active)}

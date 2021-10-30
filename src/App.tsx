@@ -5,7 +5,7 @@ import Home from "./screens/Home";
 
 function App(): JSX.Element {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Switch>
         <Route path="/controlledCube">
           <ControlledCube />

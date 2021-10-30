@@ -28,5 +28,5 @@ export default function Controls() {
     ref.current.update();
   });
 
-  return <orbitControls ref={ref} args={[camera, gl.domElement]} />;
+  return <orbitControls autoRotate ref={ref} args={[camera, gl.domElement]} />;
 }

@@ -1,14 +1,16 @@
 import { StyledCanvas } from "../Components";
 import CubeControlled from "../components/CubeControlled";
 import Controls from "../components/Controls";
+import Plane from "../components/Plane";
 
 function ControlledCube(): JSX.Element {
   return (
-    <StyledCanvas>
+    <StyledCanvas backColor={"#f0f0f0"}>
       <ambientLight />
-      <pointLight position={[50, 0, 10]} />
+      <spotLight intensity={5} position={[0, 5, 10]} penumbra={1} />
       <Controls />
-      <CubeControlled />
+      <CubeControlled cubeColor={"#000"} />
+      <Plane />
     </StyledCanvas>
   );
 }

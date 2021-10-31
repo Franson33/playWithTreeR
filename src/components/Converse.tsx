@@ -5,7 +5,7 @@ function Converse() {
   const [model, setModel] = useState<any>();
 
   useEffect(() => {}, []);
-  new GLTFLoader().load("../../public/scene.gltf", setModel);
+  new GLTFLoader().load("scene.gltf", setModel);
 
   return model ? <primitive object={model.scene} /> : null;
 }

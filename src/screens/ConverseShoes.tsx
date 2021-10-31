@@ -19,6 +19,7 @@ function ConverseShoes(): JSX.Element {
       <ambientLight />
       <spotLight intensity={5} position={[10, 5, 5]} penumbra={1} castShadow />
       <Controls />
+      <Converse />
       <Plane />
     </StyledCanvas>
   );

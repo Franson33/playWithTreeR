@@ -7,7 +7,7 @@ function Converse() {
   useEffect(() => {}, []);
   new GLTFLoader().load("scene.gltf", setModel);
 
-  return model ? <primitive object={model.scene} /> : null;
+  return model ? <primitive object={model.scene} scale={30} /> : null;
 }
 
 export default Converse;

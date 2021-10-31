@@ -17,7 +17,7 @@ function ControlledCube(): JSX.Element {
   return (
     <StyledCanvas backColor={"#f0f0f0"} onCreated={shadowMap}>
       <ambientLight />
-      <spotLight intensity={5} position={[5, 5, 5]} penumbra={1} castShadow />
+      <spotLight intensity={5} position={[10, 5, 5]} penumbra={1} castShadow />
       <Controls />
       <CubeControlled cubeColor={"#000"} />
       <Plane />

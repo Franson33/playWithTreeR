@@ -26,8 +26,8 @@ function CubeControlled({
       onPointerOut={(evt) => setHover(false)}
       castShadow
     >
-      <boxGeometry args={[2, 2, 2]} />
-      <a.meshPhysicalMaterial color={spring.color} />
+      <boxGeometry attach="geometry" args={[2, 2, 2]} />
+      <a.meshPhysicalMaterial attach="material" color={spring.color} />
     </a.mesh>
   );
 }
